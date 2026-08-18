@@ -13,3 +13,9 @@ console.log(settimana);
 let lavoro = giornidilavoro.map((giornodilavoro) => { return { lavorato: giornodilavoro.lavorato, giorno: giornodilavoro.giorno } });
 
 console.log(lavoro)
+
+let hoLavorato = giornidilavoro.filter(giornidilavoro =>
+    giornidilavoro.lavorato === true).map((giornodilavoro) => {
+        return { gioron: giornodilavoro.giorno, ore: giornodilavoro.ore }
+    })
+console.log(hoLavorato);
