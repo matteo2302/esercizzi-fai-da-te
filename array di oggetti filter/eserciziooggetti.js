@@ -5,6 +5,10 @@ let giornidilavoro = [
     { lavorato: false, giorno: "mercoledi", ore: 3.5, ruolo: "bibite" },
     { lavorato: true, giorno: "giovedi", ore: 0, ruolo: "nessuno" }
 ];
+
+//map
+
+
 let settimana = giornidilavoro.map((giornodilavoro) => {
     return giornodilavoro.giorno
 });
@@ -14,8 +18,25 @@ let lavoro = giornidilavoro.map((giornodilavoro) => { return { lavorato: giornod
 
 console.log(lavoro)
 
+
+//filter
+
+
 let hoLavorato = giornidilavoro.filter(giornidilavoro =>
     giornidilavoro.lavorato === true).map((giornodilavoro) => {
         return { gioron: giornodilavoro.giorno, ore: giornodilavoro.ore }
     })
 console.log(hoLavorato);
+
+
+//find
+
+
+let primoGiorno = giornidilavoro.find(giornodilavoro => giornodilavoro.giorno === "lunedi")
+console.log(primoGiorno)
+
+let findruoloPrimogiorno = giornidilavoro.find(giornodilavoro =>
+    giornodilavoro.giorno === "lunedi")
+
+let ruoloPrimogiorno = { giorno: findruoloPrimogiorno.giorno, ruolo: findruoloPrimogiorno.ruolo }
+console.log(ruoloPrimogiorno)
