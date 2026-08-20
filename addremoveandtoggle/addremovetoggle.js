@@ -34,3 +34,12 @@ function deleteGame(newGameList) {
 
 newGameList = deleteGame(newGameList)
 console.log(newGameList)
+
+function toggleGame(newGameList, id) {
+    return newGameList.map(game => (
+        { ...game, completed: game.id === 1 ? !game.completed : game.completed }
+    ))
+}
+
+newGameList = toggleGame(newGameList)
+console.log(newGameList)
