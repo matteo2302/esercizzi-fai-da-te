@@ -37,9 +37,9 @@ console.log(newGameList)
 
 function toggleGame(newGameList, id) {
     return newGameList.map(game => (
-        { ...game, completed: game.id === 1 ? !game.completed : game.completed }
+        { ...game, completed: game.id === id ? !game.completed : game.completed }
     ))
 }
 
-newGameList = toggleGame(newGameList)
+newGameList = toggleGame(newGameList, 1)
 console.log(newGameList)
